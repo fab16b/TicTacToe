@@ -55,15 +55,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-//        if (player1Turn){
-//            ((Button) v).setBackgroundResource("felix");
-//        } else {
-//            ((Button) v).setText("O");
-//        }
-
         if (player1Turn){
             ((Button) v).setText("X");
-            ((Button) v).setBackgroundResource(R.drawable.felix);
+            ((Button) v).setBackgroundResource(R.drawable.reeves);
         } else {
             ((Button) v).setText("O");
             ((Button) v).setBackgroundResource(R.drawable.prof_tanner);
@@ -126,14 +120,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void player1Wins() {
         player1Points++;
-        Toast.makeText(this, "Player 1 Wins", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Reeves Won!!", Toast.LENGTH_SHORT).show();
         updatePointsText();
         resetBoard();
     }
 
     private void player2Wins() {
         player2Points++;
-        Toast.makeText(this, "Player 2 Wins", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Tanner Won!!", Toast.LENGTH_SHORT).show();
         updatePointsText();
         resetBoard();
     }
